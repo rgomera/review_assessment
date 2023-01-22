@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,100&display=swap');
+
+:root {
+   --primary-color: #212529;
+   --danger-color: #f25764;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+   font-family: 'Poppins', sans-serif;
+   font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+   height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+   height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+#root {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link {
+   padding-left: 12px !important;
+   padding-right: 12px !important;
+}
+
+.carousel-indicator-circle {
+   width: 12px !important;
+   height: 12px !important;
+   border-radius: 50% !important;
+}
+.carousel-item {
+   height: 80vh;
+   background-position: center !important;
+   background-size: auto !important;
+   background-repeat: no-repeat !important;
+}
+
+.section {
+   padding: 90px 50px;
+}
+
+.cursor {
+   cursor: pointer;
+}
+
+/* footer */
+.footer-links {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.footer-links li {
+   list-style-type: none !important;
+}
+.footer-links li a {
+   text-decoration: none !important;
+}
+.footer-links li a:hover {
+   color: #fff;
+   text-decoration: underline !important;
+}
+
+.footer-links li small {
+   color: #fff !important;
+}
+
+.contact-map {
+   width: 500px;
+   height: 500px;
+}
+
+/* pagination */
+.page-item.active .page-link {
+   z-index: 3 !important;
+   color: #fff !important;
+   background-color: var(--primary-color) !important;
+   border-color: var(--primary-color) !important;
+}
+
+.page-link:hover {
+   z-index: 2 !important;
+   color: var(--primary-color) !important;
+   background-color: #d9e6db !important;
+   border-color: #d9e6db !important;
+}
+
+.page-link {
+   position: relative !important;
+   display: block !important;
+   color: var(--primary-color);
+   text-decoration: none !important;
+   background-color: #fff !important;
+   border: 1px solid #d9e6db !important;
+   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+.page-item.disabled a {
+   color: var(--primary-color) !important;
+   background-color: #d9e6db !important;
+}
+
+.page-link:focus {
+   z-index: 3 !important;
+   color: var(--primary-color) !important;
+   background-color: #d9e6db !important;
+   outline: 0 !important;
+   box-shadow: 0 0 0 0.25rem rgb(33, 37, 41, 25%);
+}
+
+@media (max-width: 768px) {
+   .contact-map {
+      width: 350px;
+      height: 300px;
+   }
 }
